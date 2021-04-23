@@ -14,7 +14,7 @@
 <body>
     <!-- logo区域 -->
     <div class="layui-main">
-        <img src="./assets//images/logo.png" alt="">
+        <img src="./assets/images/logo.png" alt="">
     </div>
     <!-- 表单区域 -->
     <div class="loginAndRegBox">
@@ -53,12 +53,12 @@
                 <!-- 密码 -->
                 <div class="layui-form-item">
                     <i class="layui-icon layui-icon-password"></i>
-                    <input type="password" name="password" required lay-verify="required" placeholder="请输入密码" autocomplete="off" class="layui-input" />
+                    <input type="password" name="password" required lay-verify="required|pwd" placeholder="请输入密码" autocomplete="off" class="layui-input" />
                 </div>
                 <!-- 密码确认框 -->
                 <div class="layui-form-item">
                     <i class="layui-icon layui-icon-password"></i>
-                    <input type="password" name="repassword" required lay-verify="required" placeholder="再次确认密码" autocomplete="off" class="layui-input" />
+                    <input type="password" name="repassword" required lay-verify="required|pwd|repwd" placeholder="再次确认密码" autocomplete="off" class="layui-input" />
                 </div>
                 <!-- 注册按钮 -->
                 <div class="layui-form-item">
@@ -73,7 +73,12 @@
     </div>
     <!-- 导入layui的js文件 -->
     <script src="./assets/lib/layui/layui.all.js"></script>
-
+    <!-- 导入jquery.js文件 -->
+    <script src="./assets/lib/jquery.js"></script>
+    <!-- 导入公共请求头 -->
+    <script src="./assets/js/baseAPI.js"></script>
+    <!-- 导入login.js文件 -->
+    <script src="./assets/js/login.js"></script>
 </body>
 
 </html>
