@@ -18,22 +18,24 @@
         <div class="layui-card-body">
             <!-- form 表单区域 -->
             <form class="layui-form" action="" lay-filter="formUserInfo">
+                <!-- 添加隐藏域,存放id -->
+                <input type="hidden" name="id">
                 <div class="layui-form-item">
                     <label class="layui-form-label">登录名称</label>
                     <div class="layui-input-block">
-                        <input type="text" name="username" required lay-verify="required" placeholder="请输入登录名称" autocomplete="off" class="layui-input" />
+                        <input type="text" name="username" required lay-verify="required" placeholder="请输入登录名称" autocomplete="off" class="layui-input" readonly/>
                     </div>
                 </div>
                 <div class="layui-form-item">
                     <label class="layui-form-label">用户昵称</label>
                     <div class="layui-input-block">
-                        <input type="text" name="nickname" required lay-verify="required" placeholder="请输入用户昵称" autocomplete="off" class="layui-input" />
+                        <input type="text" name="nickname" required lay-verify="required|nickname" placeholder="请输入用户昵称" autocomplete="off" class="layui-input" />
                     </div>
                 </div>
                 <div class="layui-form-item">
                     <label class="layui-form-label">用户邮箱</label>
                     <div class="layui-input-block">
-                        <input type="text" name="email" required lay-verify="required" placeholder="请输入用户邮箱" autocomplete="off" class="layui-input" />
+                        <input type="text" name="email" required lay-verify="required|email" placeholder="请输入用户邮箱" autocomplete="off" class="layui-input" />
                     </div>
                 </div>
                 <div class="layui-form-item">
@@ -45,8 +47,14 @@
             </form>
         </div>
     </div>
+    <!-- 导入layui.all.js文件 -->
     <script src="../assets/lib/layui/layui.all.js"></script>
-
+    <!-- 导入jquery.js文件 -->
+    <script src="../assets/lib/jquery.js"></script>
+    <!-- 导入baseAPI.js文件 -->
+    <script src="../assets/js/baseAPI.js"></script>
+    <!-- 导入user_info.js文件 -->
+    <script src="../assets/js/user/user_info.js"></script>
 </body>
 
 </html>
